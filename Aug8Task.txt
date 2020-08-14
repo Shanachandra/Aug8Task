@@ -1,0 +1,136 @@
+//Calculator
+class calc{
+calc()
+{}
+add(a,b){return a+b}
+sub(a,b){return a-b}
+mul(a,b){return a*b}
+}
+
+let c= new calc()
+console.log(c.add(1,2))
+console.log(c.sub(1,2))
+console.log(c.mul(1,2))
+
+//Circle Class diagram
+class circle{
+constructor()
+{
+}
+constructor(radius=1.0)
+{
+this.radius=radius
+}
+constructor(radius=1.0,color="red")
+{
+this.radius=radius;
+this.color=color;
+}
+String getcolor()
+{
+}
+double getradius()
+{
+}
+void setradius(radius=1.0)
+{
+}
+void setcolor(color="Red")
+{
+}
+String toString()
+{
+}
+double getArea()
+{
+}
+
+}
+
+//TV class - Inheritance	
+calss TV
+{
+
+constructor(brand,channel=1,volume=50,price,inches,onoff)
+{
+this.brand=brand;
+this.channel=channel;
+this.volume=volume;
+this.price=price;
+this.inches=inches;
+this.onoff=onoff;
+}
+IncreaseVolume(volume)
+{
+if(volume==100)
+return volume
+else
+return ++volume
+}
+DecreaseVolume(volume)
+{if(volume==0)
+return volume;
+else
+return --volume;
+}
+SetChannel(channel)
+{
+if(channel==60)
+return 50
+}
+resetTV()
+{
+this.channel=1;
+this.volume=50;
+}
+status()
+{
+return brand+ "at channel" + channel + "volume" + volume;
+}
+
+}
+
+Class FeatureTv extends TV
+{
+FeatureTv(thickness,energy,lifespan,refreshrate,)
+{
+this.thickness=thickness;
+this.energy=energy;
+this.lifespan=lifespan;
+this.refreshrate=refreshrate;
+}
+viewingAngle()
+{
+}
+BackLight()
+{
+}
+DisplayDetails()
+{
+}
+}
+
+//Movie Basics
+class movie{
+	movie(name,studio,rating="PG")
+	{
+	this.name=name;
+	this.studio=studio;
+	this.rating=rating;
+	}
+    static getpg(moviearr){
+	var result= moviearr.filter((movies)=>{movies.rating=="PG"})
+	return result
+	}
+	}
+	function addmovie(name,studio,rating){    
+        var p = new movie(name,studio,rating);
+        moviearr.push(p);
+    }
+var moviearr=[];
+	addmovie("asuran","lio","PJ");
+	addmovie("OKOK","Zito","PG");
+	addmovie("Bunny","Kite","PJ");
+	addmovie("kkka","polo","PG");
+	addmovie("yoko","lol");
+	console.log(movie.getpg(moviearr));
